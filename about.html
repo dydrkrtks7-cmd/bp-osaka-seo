@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="bpaas-design-system" content="editorial-apple">
+    <meta name="bpaas-design-theme" content="kr-mono-chrome">
+    <title>합정 가라오케 추천정보 - 오사카의 솔직한 후기</title>
+    <meta name="description" content="합정역 근처에서 노래 잘 부르고 싶으신가요? 추천정보를 공유합니다. 장비 점검부터 메뉴까지, 오사카의 솔직한 혼잣말을 들어보세요. 010-6279-0862">
+    <meta name="keywords" content="합정 가라오케 추천정보, 합정 노래방, 마포구 가라오케, 오사카, 가라오케 후기, 합정역 술집">
+    <meta name="canonical" content="https://osaka-seo.pages.dev/">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&family=Noto+Sans+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --font-sans: 'Noto Sans KR', sans-serif;
+            --font-mono: 'Noto Sans Mono', monospace;
+            --color-bg: #ffffff;
+            --color-surface: #f9f9f9;
+            --color-text-main: #111111;
+            --color-text-sub: #666666;
+            --color-border: #e0e0e0;
+            --spacing-unit: 1.5rem;
+            --border-radius: 0.5rem;
+            --max-width: 720px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            background-color: var(--color-bg);
+            color: var(--color-text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* Header & Nav */
+        header {
+            padding: var(--spacing-unit) 0;
+            border-bottom: 1px solid var(--color-border);
+            margin-bottom: calc(var(--spacing-unit) * 2);
+            position: sticky;
+            top: 0;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            z-index: 100;
+        }
+
+        .nav-list {
+            display: flex;
+            gap: var(--spacing-unit);
+            list-style: none;
+            font-family: var(--font-mono);
+            font-size: 0.875rem;
+        }
+
+        .nav-item a {
+            transition: opacity 0.2s;
+        }
+
+        .nav-item a:hover {
+            opacity: 0.5;
+        }
+
+        /* Typography */
+        h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            letter-spacing: -0.03em;
+            margin-bottom: 1rem;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-top: 3rem;
+            margin-bottom: 1rem;
+            letter-spacing: -0.02em;
+        }
+
+        h3 {
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            font-size: 1rem;
+            color: #333;
+        }
+
+        .mono-tag {
+            font-family: var(--font-mono);
+            font-size: 0.75rem;
+            color: var(--color-text-sub);
+            display: block;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        /* Components */
+        .card {
+            background: var(--color-surface);
+            border: 1px solid var(--color-border);
+            border-radius: var(--border-radius);
+            padding: var(--spacing-unit);
+            margin-bottom: var(--spacing-unit);
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-2px);
+        }
+
+        .placeholder-img {
+            width: 100%;
+            height: 240px;
+            background-color: #eaeaea;
+            border-radius: var(--border-radius);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-family: var(--font-mono);
+            font-size: 0.875rem;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-top: 1rem;
+            font-family: var(--font-mono);
+            font-size: 0.875rem;
+            border-top: 1px solid var(--color-border);
+            padding-top: 1rem;
+        }
+
+        .info-item {
+            display: flex;
+            flex-direction: column;
+            gap: 0.25rem;
+        }
+
+        .info-label {
+            color: var(--color-text-sub);
+            font-size: 0.75rem;
+        }
+
+        .btn-contact {
+            display: inline-block;
+            background-color: var(--color-text-main);
+            color: var(--color-bg);
+            padding: 1rem 2rem;
+            border-radius: var(--border-radius);
+            font-family: var(--font-mono);
+            font-weight: 700;
+            margin-top: 2rem;
+            transition: opacity 0.2s;
+            width: 100%;
+            text-align: center;
+        }
+
+        .btn-contact:hover {
+            opacity: 0.8;
+        }
+
+        ul.spec-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        ul.spec-list li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #eee;
+            font-family: var(--font-mono);
+            font-size: 0.9rem;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        ul.spec-list li:last-child {
+            border-bottom: none;
+        }
+
+        .quote-box {
+            border-left: 3px solid var(--color-text-main);
+            padding-left: 1rem;
+            margin: 2rem 0;
+            font-style: italic;
+            color: var(--color-text-sub);
+        }
+
+        footer {
+            margin-top: 4rem;
+            padding: 2rem 0;
+            border-top: 1px solid var(--color-border);
+            font-family: var(--font-mono);
+            font-size: 0.75rem;
+            color: var(--color-text-sub);
+            text-align: center;
+        }
+
+        @media (max-width: 600px) {
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+  <link rel="canonical" href="https://hwagok-karaoke-insider.xyz/about.html">
+  <meta property="og:url" content="https://hwagok-karaoke-insider.xyz/about.html">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="/">Home</a></li>
+                    <li class="nav-item"><a href="/about">About</a></li>
+                    <li class="nav-item"><a href="/info">Info</a></li>
+                    <li class="nav-item"><a href="tel:010-6279-0862">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <span class="mono-tag">Seoul / Mapo-gu / Hapjeong</span>
+        <h1>합정 가라오케 추천정보</h1>
+        
+        <p>안녕하세요, 오사카입니다. 합정역 근처에서 노래 좀 날려보고 싶은데 마땅한 곳을 못 찾겠다면? 오늘 그 고민을 끝내 드립니다. 단순히 "노래방이다"가 아니라, 내 목소리를 제대로 만들어주는 공간에 대한 이야기입니다.</p>
+
+        <div class="card">
+            <div class="placeholder-img">Osaka Karaoke Studio // Visual Placeholder</div>
+            <h3>오사카 (Osaka)</h3>
+            <p>합정역 6 번 출구에서 도보 3 분. 복잡한 거리를 벗어나 조용한 골목 안에 숨겨진 공간입니다. 여기는 그냥 노래 부르는 곳이 아니라, '소리를 연구하는' 곳이라고 보면 됩니다. 마이크 감도가 좋아서 숨소리까지 다 들릴까 봐 걱정 마세요. 그만큼 디테일하게 튜닝되어 있습니다.</p>
+            
+            <div class="info-grid">
+                <div class="info-item">
+                    <span class="info-label">Address</span>
+                    <span>서울 마포구 양화로 169</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Hours</span>
+                    <span>18:00 - 04:00</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Tel</span>
+                    <span>010-6279-0862</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Vibe</span>
+                    <span>Jazz / Soul / R&B</span>
+                </div>
+            </div>
+        </div>
+
+        <h2>왜 이곳을 추천할까? (Geek's Take)</h2>
+        
+        <p>대부분의 노래방이 '시끄러움'을 팔 때, 여기는 '명료함'을 팝니다. 제가 직접 마이크 프리앰프 세팅을 점검해 봤는데, 고역대가 너무 쏘지 않고 중저음이 따뜻하게 감싸줍니다. 특히 재즈나 소울 장르를 즐기시는 분들에게는 천국 같은 환경이에요.</p>
+
+        <div class="quote-box">
+            "노래방은 술을 마시는 곳이 아니라, 소리로 교감하는 공간이어야 합니다. 오사카는 그 점을 완벽하게 이해하고 있죠."
+        </div>
+
+        <h3>시스템 스펙 및 특징</h3>
+        <ul class="spec-list">
+            <li><span>Microphone</span> <span>Shure Beta 58A (Modified)</span></li>
+            <li><span>Mixer</span> <span>Yamaha MG Series</span></li>
+            <li><span>Acoustic</span> <span>Diffuser & Absorber Balanced</span></li>
+            <li><span>Genre</span> <span>All (Jazz Focus)</span></li>
+        </ul>
+
+        <h2>자주 묻는 질문 (FAQ)</h2>
+
+        <div class="card">
+            <h3>Q. 1 인실도 있나요?</h3>
+            <p>A. 네, 있습니다. 하지만 2~4 인 규모의 프라이빗 룸이 가장 인기가 많아요. 혼자 와서 연습하고 싶다면 평일 오후 시간을 추천합니다.</p>
+        </div>
+
+        <div class="card">
+            <h3>Q. 음식 메뉴는 어떤가요?</h3>
+            <p>A. 술안주 위주지만, 퀄리티가 상당합니다. 특히 '오사카 스타일 치킨 가라아게'는 꼭 시켜 드세요. 맥주와의 페어링이 환상적입니다.</p>
+        </div>
+
+        <div class="card">
+            <h3>Q. 예약 필수인가요?</h3>
+            <p>A. 주말 저녁에는 필수입니다. 인기 있는 룸은 일주일 전에 마감되기도 해요. 전화 주시면 친절하게 안내해 드립니다.</p>
+        </div>
+
+        <a href="tel:010-6279-0862" class="btn-contact">예약 및 문의하기</a>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Osaka Karaoke. All rights reserved.</p>
+            <p>Designed with Swiss Minimal Concept.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

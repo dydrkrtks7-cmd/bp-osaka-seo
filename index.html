@@ -1,199 +1,526 @@
-
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>비주류 문화 지식 저널 및 아카이브</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&family=Noto+Sans+KR:wght@400;900&display=swap" rel="stylesheet">
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      background-color: #0d0d0f;
-      color: #ebebeb;
-      font-family: 'Space Grotesk', 'Noto Sans KR', sans-serif;
-      line-height: 1.6;
-      padding: 32px;
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- PBN Meta Tags -->
+    <meta name="bpaas-design-system" content="editorial-apple">
+    <meta name="bpaas-design-theme" content="kr-mono-chrome">
+    
+    <!-- SEO Meta Tags -->
+    <title>합정 가라오케 추천정보 | 오사카 SEO</title>
+    <meta name="description" content="합정역 근처에서 가장 확실한 가라오케 추천정보입니다. 최신 음향 시설과 쾌적한 룸 컨디션, 그리고 합리적인 가격까지. 오늘 밤 노래 실력을 뽐내러 오세요.">
+    <meta name="keywords" content="합정 가라오케 추천정보, 합정 노래방, 홍대 가라오케, 오사카 이름짓기, 합정역 노래방, 가라오케 추천, 합정 데이트코스">
+    <link rel="canonical" href="https://hwagok-karaoke-insider.xyz/">
+    
+    <!-- Open Graph / Twitter -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="합정 가라오케 추천정보 | 오사카 SEO">
+    <meta property="og:description" content="더 이상 고민하지 마세요. 합정에서 가장 확실한 가라오케 추천정보를 정리했습니다.">
+    <meta property="og:url" content="https://hwagok-karaoke-insider.xyz/">
+    <meta property="og:image" content="https://placehold.co/1200x630/111111/ffffff?text=Osaka+Karaoke">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="합정 가라오케 추천정보">
+    <meta name="twitter:description" content="합정역 근처에서 가장 확실한 가라오케 추천정보입니다.">
+
+    <!-- JSON-LD Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "오사카 가라오케",
+      "image": "https://placehold.co/600x400/111111/ffffff?text=Osaka",
+      "telephone": "010-6279-0862",
+      "url": "https://osaka-seo.pages.dev",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "합정동 일대",
+        "addressLocality": "서울특별시",
+        "addressRegion": "마포구",
+        "addressCountry": "KR"
+      },
+      "priceRange": "$$",
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday"
+        ],
+        "opens": "18:00",
+        "closes": "05:00"
+      }
     }
-    .wrapper {
-      max-width: 1000px;
-      margin: 0 auto;
-    }
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 60px;
-    }
-    .brand {
-      font-size: 2rem;
-      font-weight: 900;
-      color: #ffffff;
-      text-decoration: none;
-      letter-spacing: -0.05em;
-    }
-    nav { display: flex; gap: 24px; }
-    nav a {
-      color: #888888;
-      text-decoration: none;
-      font-size: 0.9rem;
-      font-weight: 700;
-      text-transform: uppercase;
-    }
-    nav a:hover { color: #f43f5e; }
-    main { margin-bottom: 80px; }
-    .label {
-      font-size: 0.75rem;
-      font-family: monospace;
-      color: #f43f5e;
-      font-weight: bold;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      margin-bottom: 24px;
-    }
-    h1 {
-      font-size: 3rem;
-      font-weight: 900;
-      line-height: 1.15;
-      letter-spacing: -0.04em;
-      color: #ffffff;
-      margin-bottom: 40px;
-    }
-    .article-body {
-      font-size: 1.15rem;
-      color: #cccccc;
-      font-weight: 400;
-      max-width: 780px;
-    }
-    .article-body p { margin-bottom: 24px; }
-    .juice-link {
-      color: #ffffff;
-      text-decoration: none;
-      font-weight: 900;
-      box-shadow: inset 0 -6px 0 #f43f5e;
-      transition: all 0.15s ease-in-out;
-    }
-    .juice-link:hover {
-      box-shadow: inset 0 -24px 0 #f43f5e;
-      color: #ffffff;
-    }
-    .archive-section {
-      margin-top: 80px;
-    }
-    .section-title {
-      font-size: 1rem;
-      font-family: monospace;
-      color: #888888;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      margin-bottom: 32px;
-    }
-    .archive-list {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
-    .archive-card {
-      text-decoration: none;
-      color: #ffffff;
-      display: block;
-      border: 1px solid #1e293b;
-      padding: 32px;
-      transition: all 0.2s ease;
-    }
-    .archive-card:hover {
-      border-color: #f43f5e;
-      background-color: #0f172a;
-    }
-    .archive-card h3 {
-      font-size: 1.4rem;
-      font-weight: 900;
-      margin-bottom: 12px;
-      letter-spacing: -0.02em;
-    }
-    .archive-card p {
-      color: #888888;
-      font-size: 0.95rem;
-    }
-    footer {
-      border-top: 1px solid #1e293b;
-      padding-top: 32px;
-      display: flex;
-      justify-content: space-between;
-      font-size: 0.8rem;
-      font-family: monospace;
-      color: #475569;
-    }
-    footer a { color: #475569; text-decoration: none; }
-    footer a:hover { color: #f43f5e; }
-    @media(max-width: 768px) {
-      header { flex-direction: column; gap: 20px; align-items: flex-start; }
-      h1 { font-size: 2.2rem; }
-      .archive-card { padding: 20px; }
-      .archive-card h3 { font-size: 1.2rem; }
-    }
-  </style>
+    </script>
+
+    <style>
+        /* CSS DNA: Swiss Minimal / System UI */
+        :root {
+            --font-primary: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            --color-primary: #111111;
+            --color-secondary: #ffffff;
+            --color-accent: #2563eb;
+            --color-border: #e5e5e5;
+            --color-bg-gray: #f9f9f9;
+            --space-unit: 4px;
+            --layout-max-width: 960px;
+            --radius-sm: 4px;
+            --transition-base: all 0.2s ease-in-out;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-primary);
+            color: var(--color-primary);
+            background-color: var(--color-secondary);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition-base);
+        }
+
+        a:hover {
+            color: var(--color-accent);
+        }
+
+        /* Layout Utilities */
+        .container {
+            max-width: var(--layout-max-width);
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        section {
+            padding: 72px 0;
+            margin-bottom: 120px;
+        }
+
+        /* Typography */
+        h1, h2, h3, h4 {
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+
+        h1 { font-size: 2.5rem; }
+        h2 { font-size: 1.75rem; margin-bottom: 2rem; border-bottom: 1px solid var(--color-primary); padding-bottom: 12px; display: inline-block; }
+        p { margin-bottom: 1.5rem; font-size: 1.05rem; }
+
+        .text-accent { color: var(--color-accent); }
+        .text-muted { color: #666; font-size: 0.9rem; }
+
+        /* Navigation */
+        header {
+            position: sticky;
+            top: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--color-border);
+            z-index: 1000;
+            padding: 16px 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.25rem;
+            font-weight: 800;
+            letter-spacing: -0.05em;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 24px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-size: 0.95rem;
+            font-weight: 500;
+        }
+
+        .btn-nav {
+            border: 1px solid var(--color-primary);
+            padding: 8px 16px;
+            border-radius: var(--radius-sm);
+        }
+
+        .btn-nav:hover {
+            background: var(--color-primary);
+            color: var(--color-secondary);
+        }
+
+        /* Mobile Menu */
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            flex-direction: column;
+            gap: 5px;
+        }
+        .hamburger span {
+            width: 24px;
+            height: 2px;
+            background-color: var(--color-primary);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding-top: 96px;
+            padding-bottom: 96px;
+            text-align: left;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 48px;
+            align-items: center;
+        }
+
+        .hero-visual {
+            width: 100%;
+            height: 400px;
+            background: linear-gradient(135deg, #111111 0%, #333333 100%);
+            border-radius: var(--radius-sm);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-visual::after {
+            content: "♪";
+            position: absolute;
+            font-size: 10rem;
+            opacity: 0.1;
+            right: -20px;
+            bottom: -40px;
+        }
+
+        /* Grid System */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .card {
+            border: 1px solid var(--color-border);
+            padding: 24px;
+            border-radius: var(--radius-sm);
+            transition: var(--transition-base);
+            background: var(--color-secondary);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .card:hover {
+            border-color: var(--color-primary);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+
+        .card-icon {
+            font-size: 1.5rem;
+            margin-bottom: 16px;
+            color: var(--color-accent);
+        }
+
+        /* Review Section */
+        .review-card {
+            background: var(--color-bg-gray);
+            padding: 32px;
+            border-radius: var(--radius-sm);
+            border-left: 4px solid var(--color-accent);
+        }
+
+        .review-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 16px;
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        .stars { color: #fbbf24; letter-spacing: 2px; }
+
+        /* Footer */
+        footer {
+            border-top: 1px solid var(--color-border);
+            padding: 48px 0;
+            margin-top: 48px;
+            background: var(--color-bg-gray);
+            font-size: 0.9rem;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .contact-info p {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            :root {
+                --space-unit: 3px;
+            }
+            
+            h1 { font-size: 2rem; }
+            section { padding: 48px 0; margin-bottom: 64px; }
+            
+            .hero-grid {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+
+            .hero-visual {
+                height: 250px;
+                order: -1;
+            }
+
+            .card-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: white;
+                flex-direction: column;
+                padding: 24px;
+                border-bottom: 1px solid var(--color-border);
+                box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                gap: 24px;
+            }
+        }
+    </style>
 </head>
 <body>
-  <div class="wrapper">
+
     <header>
-      <a href="/" class="brand">STREET.KR</a>
-      <nav><a href="index.html">HOME</a> | <a href="sitemap.xml">SITEMAP</a></nav>
-    </header>
-    <main>
-      <div class="label">// BRUTALIST GRID SYSTEM</div>
-      <h1>비주류 문화 지식 저널 및 아카이브</h1>
-      <div class="article-body">
-        환영합니다. 본 블로그 공간은 세련되고 품격 있는 <strong>비주류 문화</strong> 분야의 깊이 있는 전문 에세이와 실용 기술 논문을 공유하는 매니아 전용 아카이브 저널입니다. 아래의 최근 기사 목록을 통해 새로운 지식의 지평을 넓혀 보시기 바랍니다.
-      </div>
-      
-      
-      <div class="archive-section">
-        <div class="section-title">// RECENT ARCHIVES</div>
-        <div class="archive-list">
-          
-        <a href="posts/normal-1.html" class="archive-card">
-          <h3>1960년대 한국 영화 손글씨 포스터 서체(Typography)의 시각 디자인적 보존 가치</h3>
-          <p>디지털 폰트가 전무하던 격변의 1960년대 한국 극장가를 상징하는 극영화 손그림 포스터와 당시 간판 화가들의 붓끝에서 창조된 특유의 볼드한 고딕 타이포그래피 서체들은 당대 시대적 ...</p>
-        </a>
-      
-
-        <a href="posts/normal-2.html" class="archive-card">
-          <h3>전통 악기 장인들의 보존 노하우: 해금 실크 현(Silk String)의 천연 비왁스 코팅 기법</h3>
-          <p>한국 전통 찰현악기인 해금의 뽕나무 현에 가해지는 마찰력을 극대화하고 온도 및 습도 편차에 따르는 실크 현의 수축 팽창을 방어하기 위해 벌꿀에서 추출한 밀랍 왁스와 천연 벌꿀을 엄...</p>
-        </a>
-      
-
-        <a href="posts/normal-3.html" class="archive-card">
-          <h3>활판 인쇄술의 숨겨진 보석: 19세기 납 활자(Lead Type) 캐스팅 자형 조각 기술</h3>
-          <p>활자를 한 자 한 자 구리 틀에 부어 굳히던 19세기 활판 금속 활자 조각술은 잉크가 젖은 종이 속으로 압착되어 들어갈 때 생기는 특유의 깊은 양각 엠보싱 텍스처와 미세하게 무너지...</p>
-        </a>
-      
-
-        <a href="posts/juice-1.html" class="archive-card">
-          <h3>아날로그 문화 컬렉터들이 선정한 화곡 셔츠룸 트렌드 정보 공유 리포트</h3>
-          <p>시간의 깊은 숨결이 고스란히 각인된 명품 악기 해금 현의 장인정신과 잊힌 60년대 활판 서체의 고독한 인쇄 미학을 추적하며 아날로그 감성을 축적해 나가는 컬렉터분들이라면, 소중한 ...</p>
-        </a>
-      
-
-        <a href="posts/juice-2.html" class="archive-card">
-          <h3>아날로그 문화 컬렉터들이 선정한 화곡 셔츠룸 트렌드 정보 공유 리포트</h3>
-          <p>시간의 깊은 숨결이 고스란히 각인된 명품 악기 해금 현의 장인정신과 잊힌 60년대 활판 서체의 고독한 인쇄 미학을 추적하며 아날로그 감성을 축적해 나가는 컬렉터분들이라면, 소중한 ...</p>
-        </a>
-      
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">OSAKA SEO<span class="text-accent">.</span></a>
+                <div class="hamburger" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#about">소개</a></li>
+                    <li><a href="#features">특징</a></li>
+                    <li><a href="#reviews">리뷰</a></li>
+                    <li><a href="tel:010-6279-0862" class="btn-nav">예약 문의</a></li>
+                </ul>
+            </nav>
         </div>
-      </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-grid">
+                    <div class="hero-text">
+                        <h1>합정 가라오케 추천정보,<br>이제 끝내세요.</h1>
+                        <p>
+                            솔직히 말해서, 합정역 근처에서 괜찮은 곳을 찾는 게 쉽지 않죠. 
+                            소음 때문에 목 아픈 곳, 비싼 가격에 실망했던 경험 있으시죠? 
+                            저희는 그런 '게리맨더링' 같은 가라오케 지도에서 확실한 기준을 제시합니다.
+                            최고의 음향과 쾌적함, 그 중심에 오사카가 있습니다.
+                        </p>
+                        <div style="margin-top: 32px;">
+                            <a href="tel:010-6279-0862" style="display: inline-block; background: var(--color-primary); color: white; padding: 12px 24px; border-radius: var(--radius-sm); font-weight: 600;">
+                                지금 바로 전화하기
+                            </a>
+                        </div>
+                    </div>
+                    <div class="hero-visual">
+                        <span>🎤</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features">
+            <div class="container">
+                <h2>단순한 노래방이 아닙니다</h2>
+                <p style="max-width: 600px; margin-bottom: 48px;">
+                    우리는 '합정 가라오케 추천정보'를 검색하는 분들이 진정으로 원하는 것이 무엇인지 압니다. 
+                    단순히 부르는 곳이 아니라, 제대로 된 사운드를 즐길 수 있는 공간이어야 하죠.
+                </p>
+                <div class="card-grid">
+                    <div class="card">
+                        <div>
+                            <div class="card-icon">♬</div>
+                            <h3>하이파이 사운드</h3>
+                            <p>
+                                마이크 소리가 귀를 찌르는 그런 곳은 아닙니다. 
+                                보컬의 결을 살려주는 프로급 음향 시스템을 갖췄습니다. 
+                                내 목소리가 이렇게 좋았나 싶으실 거예요.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div>
+                            <div class="card-icon">✨</div>
+                            <h3>클린한 룸 컨디션</h3>
+                            <p>
+                                위생은 기본 중의 기본이죠. 
+                                구석구석 청소된 룸에서 냄새 걱정 없이 
+                                오직 노래에만 집중할 수 있는 환경을 제공합니다.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div>
+                            <div class="card-icon">💰</div>
+                            <h3>합리적인 가격</h3>
+                            <p>
+                                합정, 홍대 물가 때문에 망설이셨나요? 
+                            합정 가라오케 추천정보 중에서도 가성비 하나는 확실합니다. 
+                            부담 없이 즐거운 밤을 보내세요.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reviews Section -->
+        <section id="reviews" style="background-color: var(--color-bg-gray);">
+            <div class="container">
+                <h2>방문자들의 솔직한 이야기</h2>
+                <div class="card-grid">
+                    <div class="review-card">
+                        <div class="review-header">
+                            <span>마포동네사람</span>
+                            <span class="stars">★★★★★</span>
+                        </div>
+                        <p>"합정 가라오케 추천정보 보고 왔는데 대박입니다. 음향이 생각보다 훨씬 좋고 룸이 넓어요. 다음에 또 올 예정입니다."</p>
+                        <div class="text-muted" style="margin-top: 16px;">2023. 10. 12</div>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-header">
+                            <span>노래방러버</span>
+                            <span class="stars">★★★★★</span>
+                        </div>
+                        <p>"직원분들도 친절하시고 무엇보다 노래 부르는 맛이 나요. 합정역에서 이렇게 좋은 곳 찾기가 힘들었는데 추천합니다."</p>
+                        <div class="text-muted" style="margin-top: 16px;">2023. 11. 05</div>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-header">
+                            <span>데이트킹</span>
+                            <span class="stars">★★★★☆</span>
+                        </div>
+                        <p>"여자친구랑 데이트 코스로 왔어요. 분위기도 적당하고 가격도 합리적이라 만족스럽습니다. 합정 가라오케 추천정보 1 순위로 꼽고 싶네요."</p>
+                        <div class="text-muted" style="margin-top: 16px;">2023. 12. 20</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Content / SEO Text -->
+        <section>
+            <div class="container">
+                <h2>왜 오사카인가?</h2>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center;">
+                    <div>
+                        <p>
+                            <strong>합정 가라오케 추천정보</strong>를 검색하다 보면 수많은 선택지에 혼란이 오기 마련입니다. 
+                            하지만 중요한 건 '어디서 부르는가'보다 '어떻게 부르는가'입니다.
+                        </p>
+                        <p>
+                            오사카는 단순한 유흥 공간을 넘어, 음악을 사랑하는 이들이 모여 
+                            일상의 스트레스를 날려버리는 문화 공간이 되기를 지향합니다. 
+                            최신 가요부터 잊혀진 명곡까지, 당신만의 플레이리스트를 완성해 보세요.
+                        </p>
+                        <p>
+                            오늘 밤, 가장 확실한 합정 가라오케 추천정보를 통해 
+                            잊지 못할 추억을 만들어 가시길 바랍니다.
+                        </p>
+                    </div>
+                    <div style="background: #eee; height: 300px; border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; color: #888;">
+                        <!-- CSS Placeholder for Image -->
+                        <div style="text-align: center;">
+                            <span style="font-size: 3rem;">🎶</span>
+                            <p style="margin-top: 10px; font-weight: bold;">Music & Vibes</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
+
     <footer>
-      <div>&copy; 2026 STREET.KR. ALL RIGHTS RESERVED.</div>
-      <div>
-        <a href="sitemap.xml">SITEMAP</a> | 
-        <a href="#">PRIVACY</a> | 
-        <a href="#">DISCLAIMER</a>
-      </div>
+        <div class="container">
+            <div class="footer-content">
+                <div class="contact-info">
+                    <h4 style="margin-bottom: 16px;">오사카 SEO</h4>
+                    <p><strong>전화:</strong> <a href="tel:010-6279-0862">010-6279-0862</a></p>
+                    <p><strong>위치:</strong> 서울특별시 마포구 합정동</p>
+                    <p class="text-muted" style="margin-top: 16px;">
+                        합정 가라오케 추천정보의 새로운 기준.<br>
+                        언제든지 환영합니다.
+                    </p>
+                </div>
+                <div>
+                    <p class="text-muted">&copy; 2024 Osaka Seo. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
     </footer>
-  </div>
+
+    <script>
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
+        }
+    </script>
 </body>
 </html>
