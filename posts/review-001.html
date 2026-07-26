@@ -23,7 +23,7 @@
   <main>
     <h1>벤치마크 점수에 눈먼 자들이 놓친 Llama 3.1 8B RoPE theta의 진짜 속사정: 5천만이 능사가 아니라고?</h1>
     <article>
-      <p><img src="../assets/interior__hero__t3b04-bh-kb-real-1__1344x768__cd66458dc0486ab8.png" alt="Llama 3.1 8B 모델의 RoPE theta 스케일링 그래프와 어텐션 패턴 시각화, 복잡한 데이터 분석" loading="lazy" width="1344" height="768"></p>
+      <p><img src="../assets/interior__hero__t3b04-bh-kb-real-1__1344x768__cd66458dc0486ab8.webp" alt="Llama 3.1 8B 모델의 RoPE theta 스케일링 그래프와 어텐션 패턴 시각화, 복잡한 데이터 분석" loading="lazy" width="1344" height="768"></p>
 <p>아니, 세상 사람들이 다 Llama 3.1 8B의 RoPE theta를 50만에서 5000만으로 올린 게 혁신이라고 떠들 때부터 뭔가 이상하다고 생각하지 않았습니까? 다들 그저 '오, RoPE theta가 커졌으니 컨텍스트가 더 길어졌겠네!' 하고 박수 치는데, 솔직히 저는 속으로 비웃었습니다. 벤치마크 숫자 몇 개로 모델의 본질을 다 파악했다고 착각하는 게 얼마나 위험한데요.</p>
 <p>솔직히, 초기 Perplexity 보고서들 보면서 갸웃거렸습니다. 특히 긴 컨텍스트 구간에서 Perplexity가 드라마틱하게 떨어진다고 하는데, 실제로 써보면 미묘하게 다른 감각이 있었단 말이죠. '이거 `perplexity plateau`에 도달한 게 아니라, 특정 토큰 구간에서만 지표가 좋아 보이게 튜닝된 거 아닌가?' 하는 의구심이 들더군요. `RoPE theta scaling anomaly`를 무시하는 건 너무 순진한 생각입니다.</p>
 <p>## 겉으로 드러나지 않는 어텐션 패턴의 진실</p>
