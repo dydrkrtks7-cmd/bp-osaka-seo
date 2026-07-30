@@ -1,5 +1,5 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://hwagok-massage-note.mapo-shirts-story.xyz/sitemap.xml
-Sitemap: https://hwagok-massage-note.mapo-shirts-story.xyz/sitemap-pages.xml
+Sitemap: https://blog.hwagok-karaoke-insider.xyz/sitemap.xml
+Sitemap: https://blog.hwagok-karaoke-insider.xyz/sitemap-pages.xml
