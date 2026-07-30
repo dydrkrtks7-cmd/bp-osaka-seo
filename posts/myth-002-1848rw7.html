@@ -36,7 +36,7 @@
 <h4>GPU 별 재현 조건과 Neovim inlay hint 충돌</h4>
 <p>LLaMa 3.1 모델을 재현하기 위해 다양한 GPU가 사용되었습니다. 각각의 GPU별로 동일한 결과가 나오는지 확인했지만, Neovim inlay hint 충돌 문제도 발견했습니다. 이를 통해 Neovim과 LLaMa의 조합에서 어떤 문제가 발생하는지를 파악할 수 있었습니다.</p>
 <h4>실험 조건</h4>
-<p>1. <strong>GPU 선택</strong>: Tesla T4와 V100 두 가지 GPU로 실험을 진행했습니다.<br>2. <strong>RoPE Theta 값 변경</strong>: 50만에서 5000만으로 조정했습니다.<br>3. <strong>Perplexity 측정</strong>: 각 GPU에서 총 세 번 Perplexity 값을 재측정했으며, 평균값이 최종 결과로 선택되었습니다.<br>4. <strong>特定 토큰 구간 어텐션 패턴</strong>: RoPE Theta 변경 후의 특정 토큰 구간에서의 어텐션 패턴을 분석했습니다.</p>
+<p>1. <strong>GPU 선택</strong>: Tesla T4와 V100 두 가지 GPU로 실험을 진행했습니다.<br>2. <strong>RoPE Theta 값 변경</strong>: 50만에서 5000만으로 조정했습니다.<br>3. <strong>Perplexity 측정</strong>: 각 GPU에서 총 세 번 Perplexity 값을 재측정했으며, 평균값이 최종 결과로 선택되었습니다.<br>4. <strong>특정 토큰 구간 어텐션 패턴</strong>: RoPE Theta 변경 후의 특정 토큰 구간에서의 어텐션 패턴을 분석했습니다.</p>
 <h4>결론</h4>
 <p>LLaMa 3.1 8B 모델의 RoPE Theta 값이 50만에서 5000만으로 조정된 결과, Perplexity는 약 2% 줄었으며, 특정 토큰 구간에서 어텐션 패턴도 일부 변화가 발생했습니다. Neovim inlay hint 충돌은 다른 문제로 분석되었지만, 이 모든 조건을 고려하면 LLaMa의 GPU 별 재현 조건과 Neovim inlay hint에 대한 이해는 더욱 깊어졌습니다.</p>
 <h4>SEO 최적화 alt 텍스트<br>합정 가라오케 추천 정보: LLaMA 3.1 모델 RoPE Theta 값 변경으로 Perplexity와 특정 토큰 어텐션 패턴 변화, Neovim inlay hint 충돌 분석</h4>
