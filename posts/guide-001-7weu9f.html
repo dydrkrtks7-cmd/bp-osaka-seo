@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>대형 언어 모델의 히든딤 절단이 인스트럭션 팔로잉 붕괴를 유발하는 원인</title>
-<meta name="description" content="대형 언어 모델을 경량화할 때 흔히 사용하는 방법 중 하나가 GGUF 형식의 Q4_K_M 양자화입니다.">
+<meta name="description" content="히든딤 절단은 단순히 모델을 작게 만드는 것에 그치지 않습니다. 트랜스포머 구조에서 어텐션 헤드와 피드포워드 레이어는 히든딤 크기에 맞춰 설계된 고차원 정보 흐름에 의존합니다.">
   <link rel="canonical" href="https://blog.hwagok-karaoke-insider.xyz/posts/guide-001-7weu9f.html">
   <style>
     body { font-family: sans-serif; line-height: 1.8; max-width: 800px; margin: 40px auto; padding: 0 20px; color: #333; }
@@ -17,7 +17,7 @@
   </style>
   <meta property="og:url" content="https://blog.hwagok-karaoke-insider.xyz/posts/guide-001-7weu9f.html">
   <meta property="og:title" content="대형 언어 모델의 히든딤 절단이 인스트럭션 팔로잉 붕괴를 유발하는 원인">
-  <meta property="og:description" content="대형 언어 모델을 경량화할 때 흔히 사용하는 방법 중 하나가 GGUF 형식의 Q4_K_M 양자화입니다.">
+  <meta property="og:description" content="히든딤 절단은 단순히 모델을 작게 만드는 것에 그치지 않습니다. 트랜스포머 구조에서 어텐션 헤드와 피드포워드 레이어는 히든딤 크기에 맞춰 설계된 고차원 정보 흐름에 의존합니다.">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary">
 </head>
